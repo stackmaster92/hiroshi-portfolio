@@ -10,7 +10,7 @@ const Hero = () => {
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               Hello, I'm{" "}
               <span className="bg-accent-gradient bg-clip-text text-transparent">
-                Alex Johnson
+                Takahiro Hiroshi
               </span>
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
@@ -31,7 +31,7 @@ const Hero = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-accent border-4 border-accent/20">
                 <img 
                   src={profilePhoto} 
-                  alt="Alex Johnson - Full-Stack Developer"
+                  alt="Takahiro Hiroshi - Full-Stack Developer"
                   className="w-full h-full object-cover"
                 />
               </div>
