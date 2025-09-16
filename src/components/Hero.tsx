@@ -9,8 +9,11 @@ const Hero = () => {
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
               Hello, I'm{" "}
-              <span className="bg-accent-gradient bg-clip-text text-transparent">
-                Takahiro Hiroshi
+              <span className="relative">
+                <span className="absolute inset-0 bg-name-highlight bg-clip-text text-transparent blur-sm opacity-60"></span>
+                <span className="relative bg-name-highlight bg-clip-text text-transparent shadow-name-glow animate-pulse">
+                  Takahiro Hiroshi
+                </span>
               </span>
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
