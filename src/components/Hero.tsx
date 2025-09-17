@@ -16,8 +16,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="text-xl lg:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
-              Full-Stack Developer & UI/UX Designer passionate about creating 
-              exceptional digital experiences that make a difference.
+              FullStack & AI Developer | DevOps Engineer | Scalable Systems & Automation 🚀 | Tech Enthusiast 💡 | Always learning & improving 🔧
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" variant="secondary" className="text-lg px-8 py-3">

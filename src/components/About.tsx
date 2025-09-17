@@ -2,14 +2,9 @@ import { Card } from "@/components/ui/card";
 
 const About = () => {
   const skills = [
-    "React & TypeScript",
-    "Node.js & Express",
-    "Python & Django",
-    "PostgreSQL & MongoDB",
-    "AWS & Docker",
-    "UI/UX Design",
-    "Figma & Adobe XD",
-    "Git & CI/CD"
+    "React & Next.js", "Vue.js & Angular", "Node.js & Express", "Python & Django",
+    "FastAPI & Flask", "Laravel & Rails", "MongoDB & PostgreSQL", "AWS & Docker",
+    "Kubernetes & Terraform", "AI/ML & NLP", "ETL Pipelines", "DevOps & CI/CD"
   ];
 
   return (
@@ -23,17 +18,17 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate full-stack developer with over 5 years of experience 
-                creating digital solutions that bridge the gap between design and 
-                functionality. My journey started with a curiosity about how things work, 
-                and it has evolved into a career dedicated to building meaningful software.
+                I'm a seasoned FullStack & AI Developer with over 8 years of experience building 
+                scalable systems, AI-powered applications, and robust backend architectures. 
+                From ETL pipelines processing real estate data to AI chatbots powered by GPT models, 
+                I specialize in transforming complex business requirements into efficient, maintainable solutions.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, 
-                contributing to open-source projects, or sharing knowledge through 
-                mentoring and technical writing. I believe in the power of technology 
-                to solve real-world problems and improve people's lives.
+                My expertise spans the entire technology stack—from React frontends to Python/Node.js 
+                backends, DevOps automation, and machine learning integration. I'm passionate about 
+                leveraging cutting-edge AI technologies and cloud infrastructure to deliver systems 
+                that scale and perform under pressure.
               </p>
 
               <div className="flex flex-wrap gap-2 pt-4">
@@ -53,15 +48,15 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-border pb-2">
                   <span className="text-muted-foreground">Location</span>
-                  <span className="font-medium">San Francisco, CA</span>
+                  <span className="font-medium">Tokyo, Japan</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-border pb-2">
                   <span className="text-muted-foreground">Experience</span>
-                  <span className="font-medium">5+ Years</span>
+                  <span className="font-medium">8+ Years</span>
                 </div>
                 <div className="flex justify-between items-center border-b border-border pb-2">
                   <span className="text-muted-foreground">Focus</span>
-                  <span className="font-medium">Full-Stack Development</span>
+                  <span className="font-medium">AI & Backend Systems</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-muted-foreground">Availability</span>

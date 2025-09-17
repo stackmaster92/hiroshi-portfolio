@@ -4,39 +4,94 @@ import { Badge } from "@/components/ui/badge";
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Full-Stack Developer",
-      company: "TechCorp Solutions",
-      period: "2022 - Present",
-      description: "Led development of enterprise web applications serving 100k+ users. Architected scalable microservices and implemented modern React frontends.",
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
+      title: "Data Engineer",
+      company: "Gravitate (Contract)",
+      period: "August 2024 – June 2025",
+      description: "Designed and maintained ETL pipelines for aggregating and analyzing off-market real estate data, integrating data scraping, APIs, and cloud storage for real-time listing updates.",
+      technologies: ["Python", "SQL", "GPT-3", "React.js", "ETL Pipelines"],
       achievements: [
-        "Reduced app load times by 40% through optimization",
-        "Led team of 5 developers on major product launch",
-        "Implemented CI/CD pipeline reducing deployment time by 60%"
+        "Built scalable data pipelines supporting AI-driven real estate assistants",
+        "Developed data models improving deal discovery accuracy and reporting speed",
+        "Engineered data-driven deal calculators with real-time ROI insights",
+        "Created analytics dashboards for real estate agent performance scoring"
+      ]
+    },
+    {
+      title: "Senior Backend Engineer & AI Developer",
+      company: "Prosa.ai (Part-time)",
+      period: "September 2023 – December 2024",
+      description: "Developed and deployed AI-powered systems, including NLP pipelines, conversational chatbots, and text recognition models, enhancing automation and user engagement.",
+      technologies: ["Python", "Node.js", "Docker", "Kubernetes", "NLP", "ML Models"],
+      achievements: [
+        "Built microservices migrating legacy systems to scalable containerized architecture",
+        "Designed APIs supporting real-time dashboards with high availability",
+        "Collaborated with product teams aligning AI features with business requirements",
+        "Conducted ML experiments and fine-tuned LLMs for automation"
+      ]
+    },
+    {
+      title: "Senior Backend Developer",
+      company: "TechSolutions Inc.",
+      period: "October 2022 – August 2023",
+      description: "Led the migration of internal service applications to a custom, in-house backend stack built primarily with Python (FastAPI), enhancing system performance and scalability.",
+      technologies: ["Python", "FastAPI", "OAuth2/JWT", "AWS", "PostgreSQL", "Jenkins"],
+      achievements: [
+        "Developed reusable Python service template adopted company-wide",
+        "Architected CI/CD pipelines with automated testing and AWS deployment",
+        "Designed optimized RESTful APIs integrating with managed databases",
+        "Introduced TDD practices achieving higher code coverage"
+      ]
+    },
+    {
+      title: "Senior Software Engineer",
+      company: "DevX Innovations",
+      period: "April 2020 – August 2022",
+      description: "Led the development and optimization of full-stack applications with a focus on scalability and performance, leveraging Python, Django, Flask, and React.",
+      technologies: ["Python", "Django", "Flask", "React", "Vue.js", "NoSQL", "TDD"],
+      achievements: [
+        "Streamlined complex data management workflows improving operational efficiency",
+        "Enhanced front-end applications reducing load time and improving UX",
+        "Resolved critical data synchronization issues between NoSQL databases and APIs",
+        "Drove full-stack project development with robust TDD practices"
       ]
     },
     {
       title: "Full-Stack Developer",
-      company: "StartupXYZ",
-      period: "2020 - 2022",
-      description: "Built and maintained multiple client projects from concept to deployment. Collaborated closely with design team to create pixel-perfect implementations.",
-      technologies: ["Vue.js", "Python", "Django", "MySQL", "Docker"],
+      company: "FinTech Solutions Ltd.",
+      period: "April 2019 – January 2020",
+      description: "Engineered dynamic, real-time dashboards for performance metrics and sentiment analysis, utilizing data scraping, NLP, and advanced data visualization techniques.",
+      technologies: ["WebSocket", "NLP", "Data Visualization", "Real-time Processing"],
       achievements: [
-        "Delivered 12+ projects on time and under budget",
-        "Improved client satisfaction scores by 25%",
-        "Mentored 3 junior developers"
+        "Developed WebSocket-based real-time communication features",
+        "Built real-time chat application enhancing team collaboration",
+        "Streamlined data pipelines for real-time processing improving system efficiency",
+        "Delivered scalable full-stack solutions with focus on long-term maintainability"
+      ]
+    },
+    {
+      title: "Backend Developer",
+      company: "CloudTech Systems",
+      period: "March 2017 – January 2019",
+      description: "Designed and developed scalable backend systems using PHP, Laravel, and CodeIgniter, ensuring high performance and maintainability.",
+      technologies: ["PHP", "Laravel", "CodeIgniter", "WebSocket", "NoSQL", "MySQL"],
+      achievements: [
+        "Architected real-time communication features using WebSocket",
+        "Optimized databases supporting high-volume transactions",
+        "Collaborated with front-end teams designing and integrating APIs",
+        "Improved application performance by resolving bottlenecks"
       ]
     },
     {
       title: "Frontend Developer",
-      company: "Digital Agency Pro",
-      period: "2019 - 2020",
-      description: "Specialized in creating responsive, accessible web applications for diverse clientele including e-commerce, healthcare, and finance sectors.",
-      technologies: ["React", "JavaScript", "SCSS", "Webpack", "Jest"],
+      company: "Digital Innovations",
+      period: "August 2015 – January 2017",
+      description: "Developed responsive and interactive web pages using HTML5, CSS3, JavaScript, and Bootstrap, ensuring seamless cross-device and cross-browser compatibility.",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "API Integration"],
       achievements: [
-        "Achieved 98% accessibility compliance across all projects",
-        "Reduced client revision requests by 30%",
-        "Implemented reusable component library"
+        "Transformed design prototypes into pixel-perfect functional components",
+        "Integrated APIs ensuring efficient frontend-backend communication",
+        "Optimized performance through lazy loading and code minification",
+        "Maintained existing projects resolving bugs and implementing new features"
       ]
     }
   ];
