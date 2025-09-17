@@ -40,11 +40,23 @@ const Contact = () => {
                 <Card className="p-4 hover:shadow-accent transition-shadow duration-300">
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-accent/10 rounded-lg">
-                      <MapPin className="w-5 h-5 text-accent" />
+                      <Phone className="w-5 h-5 text-accent" />
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">Location</p>
-                      <p className="text-muted-foreground">Tokyo, Japan</p>
+                      <p className="font-medium text-foreground">WhatsApp</p>
+                      <p className="text-muted-foreground">+1 (229) 588-6699</p>
+                    </div>
+                  </div>
+                </Card>
+
+                <Card className="p-4 hover:shadow-accent transition-shadow duration-300">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 bg-accent/10 rounded-lg">
+                      <Send className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-foreground">Telegram</p>
+                      <p className="text-muted-foreground">@smartdev1227</p>
                     </div>
                   </div>
                 </Card>

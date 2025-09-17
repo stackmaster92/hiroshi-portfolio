@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Experience from "@/components/Experience";
-import Education from "@/components/Education";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 
@@ -12,7 +11,6 @@ const Index = () => {
       <About />
       <Experience />
       <Skills />
-      <Education />
       <Contact />
     </div>
   );

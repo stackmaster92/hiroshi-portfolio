@@ -47,10 +47,6 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-6 text-foreground">Quick Facts</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center border-b border-border pb-2">
-                  <span className="text-muted-foreground">Location</span>
-                  <span className="font-medium">Tokyo, Japan</span>
-                </div>
-                <div className="flex justify-between items-center border-b border-border pb-2">
                   <span className="text-muted-foreground">Experience</span>
                   <span className="font-medium">8+ Years</span>
                 </div>
