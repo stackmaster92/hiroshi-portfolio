@@ -110,10 +110,10 @@ const Auth = () => {
     }
   };
 
-  const signInWithLinkedIn = async () => {
+  const signInWithFacebook = async () => {
     setLoading(true);
     const { error } = await supabase.auth.signInWithOAuth({
-      provider: 'linkedin_oidc',
+      provider: 'facebook',
       options: {
         redirectTo: `${window.location.origin}/`
       }
@@ -177,12 +177,12 @@ const Auth = () => {
                   Continue with Google
                 </Button>
                 <Button 
-                  onClick={signInWithLinkedIn} 
+                  onClick={signInWithFacebook} 
                   variant="outline" 
                   className="w-full"
                   disabled={loading}
                 >
-                  Continue with LinkedIn
+                  Continue with Facebook
                 </Button>
               </div>
               
@@ -235,12 +235,12 @@ const Auth = () => {
                   Continue with Google
                 </Button>
                 <Button 
-                  onClick={signInWithLinkedIn} 
+                  onClick={signInWithFacebook} 
                   variant="outline" 
                   className="w-full"
                   disabled={loading}
                 >
-                  Continue with LinkedIn
+                  Continue with Facebook
                 </Button>
               </div>
               

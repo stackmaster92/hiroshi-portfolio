@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import { User, Session } from '@supabase/supabase-js';
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const scrollToSection = (sectionId: string) => {
@@ -8,14 +11,43 @@ const scrollToSection = (sectionId: string) => {
     element.scrollIntoView({ behavior: 'smooth' });
   }
 };
-const Hero = () => {
+
+interface HeroProps {
+  user: User;
+  session: Session;
+}
+
+const Hero = ({ user }: HeroProps) => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleLogout = async () => {
+    const { error } = await supabase.auth.signOut();
+    
+    if (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error.message,
+      });
+    } else {
+      navigate("/auth");
+    }
+  };
+
   return <section className="min-h-screen flex items-center justify-center bg-hero-gradient text-primary-foreground relative">
-      <div className="absolute top-6 right-6">
-        <Link to="/auth">
-          <Button variant="outline" size="sm" className="border-primary-foreground/20 hover:bg-primary-foreground/10 text-primary-foreground">
-            Login
-          </Button>
-        </Link>
+      <div className="absolute top-6 right-6 flex items-center gap-4">
+        <span className="text-sm text-primary-foreground/80">
+          Welcome, {user.email}
+        </span>
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="border-primary-foreground/20 hover:bg-primary-foreground/10 text-primary-foreground"
+          onClick={handleLogout}
+        >
+          Logout
+        </Button>
       </div>
       <div className="container mx-auto px-6 py-20">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
