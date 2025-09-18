@@ -1,7 +1,22 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import profilePhoto from "@/assets/profile-photo.jpg";
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+};
 const Hero = () => {
-  return <section className="min-h-screen flex items-center justify-center bg-hero-gradient text-primary-foreground">
+  return <section className="min-h-screen flex items-center justify-center bg-hero-gradient text-primary-foreground relative">
+      <div className="absolute top-6 right-6">
+        <Link to="/auth">
+          <Button variant="outline" size="sm" className="border-primary-foreground/20 hover:bg-primary-foreground/10 text-primary-foreground">
+            Login
+          </Button>
+        </Link>
+      </div>
       <div className="container mx-auto px-6 py-20">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 text-center lg:text-left">
@@ -17,10 +32,20 @@ const Hero = () => {
               FullStack & AI Developer | DevOps Engineer | Scalable Systems & Automation | Tech Enthusiast | Always learning & improving
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" variant="secondary" className="text-lg px-8 py-3">
+              <Button 
+                size="lg" 
+                variant="secondary" 
+                className="text-lg px-8 py-3"
+                onClick={() => scrollToSection('experience')}
+              >
                 View My Work
               </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 py-3 border-primary-foreground/20 hover:bg-primary-foreground/10 text-slate-700">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="text-lg px-8 py-3 border-primary-foreground/20 hover:bg-primary-foreground/10 text-slate-700"
+                onClick={() => scrollToSection('contact')}
+              >
                 Get In Touch
               </Button>
             </div>
