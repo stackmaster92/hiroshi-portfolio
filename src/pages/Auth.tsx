@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { User, Session } from '@supabase/supabase-js';
+import { Separator } from "@/components/ui/separator";
 
 const Auth = () => {
   const [user, setUser] = useState<User | null>(null);
@@ -89,6 +90,46 @@ const Auth = () => {
     }
   };
 
+  const signInWithGoogle = async () => {
+    setLoading(true);
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: `${window.location.origin}/`
+      }
+    });
+    
+    setLoading(false);
+    
+    if (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error.message,
+      });
+    }
+  };
+
+  const signInWithLinkedIn = async () => {
+    setLoading(true);
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'linkedin_oidc',
+      options: {
+        redirectTo: `${window.location.origin}/`
+      }
+    });
+    
+    setLoading(false);
+    
+    if (error) {
+      toast({
+        variant: "destructive",
+        title: "Error",
+        description: error.message,
+      });
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>, isSignUp: boolean) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
@@ -125,7 +166,37 @@ const Auth = () => {
               <TabsTrigger value="signup">Sign Up</TabsTrigger>
             </TabsList>
             
-            <TabsContent value="signin">
+            <TabsContent value="signin" className="space-y-4">
+              <div className="space-y-4">
+                <Button 
+                  onClick={signInWithGoogle} 
+                  variant="outline" 
+                  className="w-full"
+                  disabled={loading}
+                >
+                  Continue with Google
+                </Button>
+                <Button 
+                  onClick={signInWithLinkedIn} 
+                  variant="outline" 
+                  className="w-full"
+                  disabled={loading}
+                >
+                  Continue with LinkedIn
+                </Button>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <Separator className="w-full" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-background px-2 text-muted-foreground">
+                    Or continue with email
+                  </span>
+                </div>
+              </div>
+
               <form onSubmit={(e) => handleSubmit(e, false)} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="signin-email">Email</Label>
@@ -153,7 +224,37 @@ const Auth = () => {
               </form>
             </TabsContent>
             
-            <TabsContent value="signup">
+            <TabsContent value="signup" className="space-y-4">
+              <div className="space-y-4">
+                <Button 
+                  onClick={signInWithGoogle} 
+                  variant="outline" 
+                  className="w-full"
+                  disabled={loading}
+                >
+                  Continue with Google
+                </Button>
+                <Button 
+                  onClick={signInWithLinkedIn} 
+                  variant="outline" 
+                  className="w-full"
+                  disabled={loading}
+                >
+                  Continue with LinkedIn
+                </Button>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute inset-0 flex items-center">
+                  <Separator className="w-full" />
+                </div>
+                <div className="relative flex justify-center text-xs uppercase">
+                  <span className="bg-background px-2 text-muted-foreground">
+                    Or continue with email
+                  </span>
+                </div>
+              </div>
+
               <form onSubmit={(e) => handleSubmit(e, true)} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="signup-email">Email</Label>
